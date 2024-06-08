@@ -1,6 +1,7 @@
 import { useEffect, useState } from 'react';
 import Link from 'next/link';
 import styles from '../styles/Home.module.css';
+import Card from '@/components/Card';
 
 export default function Home() {
     const [articles, setArticles] = useState([]);
@@ -17,6 +18,13 @@ export default function Home() {
     return (
         <div>
             <h1>Latest News</h1>
+            <div className={styles.articles}>
+                {articles.map((article, index) => (
+                    <Link key={index} href={`/article/${index}`}>
+                        <Card article={article}></Card>
+                    </Link>
+                ))}
+            </div>
         </div>
     );
 }
