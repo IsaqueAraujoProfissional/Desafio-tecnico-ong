@@ -1,5 +1,4 @@
 import { useEffect, useState } from 'react';
-import Link from 'next/link';
 import styles from '../styles/Home.module.css';
 import Card from '@/components/Card';
 
@@ -20,7 +19,7 @@ export default function Home() {
             <h1>Latest News</h1>
             <div className={styles.articles}>
                 {articles.map((article, index) => (
-                    <Card article={article} index={index}></Card>
+                    <Card key={index} article={article} index={index}></Card>
                 ))}
             </div>
         </div>

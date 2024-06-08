@@ -5,7 +5,7 @@ export default function Card(props) {
     let article = props.article
     let index = props.index
     return (
-        <Link legacyBehavior key={index} href={`/article/${index}`}>
+        <Link legacyBehavior href={`/article/${index}`}>
             <a className={styles.card}>
                 <h2>{article.title}</h2>
                 {article.urlToImage && <img src={article.urlToImage} alt={article.title} />}
