@@ -46,3 +46,5 @@ Este é um portal de notícias responsivo desenvolvido utilizando o framework Ne
    npm run dev
 
 5. Abra o navegador e acesse http://localhost:3000 para ver a aplicação em funcionamento.
+
+Site extremanete simples feito por Isaque de Araújo!
