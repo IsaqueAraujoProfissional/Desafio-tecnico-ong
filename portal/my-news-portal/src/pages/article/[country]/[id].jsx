@@ -20,7 +20,7 @@ export default function Article({ article }) {
                 {article.author && <p>By: {article.author}</p>}
                 {article.publishedAt && <p>Published on: {new Date(article.publishedAt).toLocaleDateString()}</p>}
             </div>
-            <Link legacyBehavior href="/">
+            <Link legacyBehavior href={{ pathname: '/', query: { local: country } }}>
                 <a className={styles.backButton}>Back to Home</a>
             </Link>
         </div>

@@ -1,13 +1,15 @@
+import { useRouter } from 'next/router';
 import { useEffect, useState } from 'react';
 import InfiniteScroll from 'react-infinite-scroll-component';
 import styles from '../styles/Home.module.css';
 import Card from '../components/Card';
 
 export default function Home() {
+    const router = useRouter();
     const [articles, setArticles] = useState([]);
     const [page, setPage] = useState(1);
     const [hasMore, setHasMore] = useState(true);
-    const [country, setCountry] = useState('us'); // Estado para controlar o país selecionado
+    const [country, setCountry] = useState(router.query.local === undefined ? 'us': router.query.local); // Estado para controlar o país selecionado
 
     useEffect(() => {
         setArticles([])
