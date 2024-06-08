@@ -4,8 +4,9 @@ import Link from 'next/link';
 export default function Card(props) {
     let article = props.article
     let index = props.index
+    let country = props.country
     return (
-        <Link legacyBehavior href={`/article/${index}`}>
+        <Link legacyBehavior href={`/article/${country}/${index}`}>
             <a className={styles.card}>
                 <h2>{article.title}</h2>
                 {article.urlToImage && <img src={article.urlToImage} alt={article.title} />}
