@@ -20,9 +20,7 @@ export default function Home() {
             <h1>Latest News</h1>
             <div className={styles.articles}>
                 {articles.map((article, index) => (
-                    <Link key={index} href={`/article/${index}`}>
-                        <Card article={article}></Card>
-                    </Link>
+                    <Card article={article} index={index}></Card>
                 ))}
             </div>
         </div>
