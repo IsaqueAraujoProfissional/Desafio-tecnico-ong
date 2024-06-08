@@ -32,9 +32,10 @@ Este é um portal de notícias responsivo desenvolvido utilizando o framework Ne
    git clone https://github.com/IsaqueAraujoProfissional/Desafio-tecnico-ong.git
    cd Desafio-tecnico-ong
 
-2. Instale as dependências na portal:
+2. Instale as dependências na pasta my-news-portal:
    
    cd portal
+   cd my-news-portal
    npm install
 
 3. Crie um arquivo .env.local na raiz do projeto e adicione sua chave de API da NewsAPI:
