@@ -1,0 +1,18 @@
+.card {
+    border: 1px solid #ddd;
+    padding: 20px;
+    border-radius: 5px;
+    text-decoration: none;
+    color: inherit;
+    transition: transform 0.2s ease-in-out;
+}
+
+.card:hover {
+    transform: scale(1.05);
+}
+
+.card img {
+    max-width: 100%;
+    height: auto;
+    margin-bottom: 10px;
+}
