@@ -18,10 +18,10 @@ export default function Article({ article }) {
             <p className={styles.content}>{article.content}</p>
             <div className={styles.meta}>
                 {article.author && <p>By: {article.author}</p>}
-                {article.publishedAt && <p>Published on: {new Date(article.publishedAt).toLocaleDateString()}</p>}
+                {article.publishedAt && <p>Publicado em: {new Date(article.publishedAt).toLocaleDateString()}</p>}
             </div>
             <Link legacyBehavior href={{ pathname: '/', query: { local: country } }}>
-                <a className={styles.backButton}>Back to Home</a>
+                <a className={styles.backButton}>Voltar</a>
             </Link>
         </div>
     );
