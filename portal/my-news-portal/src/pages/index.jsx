@@ -20,9 +20,9 @@ export default function Home() {
 
     const fetchArticles = async (isNewCountry = false) => {
         const currentPage = isNewCountry ? 1 : page;
-        //const res = await fetch(`https://newsapi.org/v2/top-headlines?country=${country}&page=${currentPage}&apiKey=${process.env.NEXT_PUBLIC_NEWS_API_KEY}`);
-        //const data = await res.json();
-        const data = {
+        const res = await fetch(`https://newsapi.org/v2/top-headlines?country=${country}&page=${currentPage}&apiKey=${process.env.NEXT_PUBLIC_NEWS_API_KEY}`);
+        const data = await res.json();
+        /*const data = {
             "status": "ok",
             "totalResults": 45,
             "articles": [
@@ -40,7 +40,7 @@ export default function Home() {
                     "content": "Foreign investors are set to be allocated about 60% of the shares on offer in Saudi Aramcos $11.2 billion stock sale, people familiar with the matter said, marking a turnaround from the oil giants 20… [+332 chars]"
                 }
             ]
-        }
+        }*/
         if (data.articles.length === 0) {
             console.log('ok')
             setHasMore(false);
